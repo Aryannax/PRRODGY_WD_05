@@ -50,7 +50,7 @@ async function fetchWeather(city) {
         cityNameDisplay.textContent = weatherData.name;
         temperatureDisplay.textContent = `${Math.round(weatherData.main.temp)}°C`;
         humidityDisplay.textContent = `${weatherData.main.humidity}%`;
-        windSpeedDisplay.textContent = `${weatherData.wind.speed} km/h`;
+        windSpeedDisplay.textContent = `${(weatherData.wind.speed * 3.6).toFixed(1)} km/h`;
 
 
         const weatherCondition = weatherData.weather[0].main.toLowerCase();
